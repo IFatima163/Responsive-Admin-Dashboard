@@ -7,12 +7,12 @@ A responsive admin dashboard built with Vite + React to view current system stat
 - Side-bar dashboard for optimization and efficiency
 
 ## Tech Stack
-- **Frontend:** React, Vite
+- **Frontend:** React, Vite, Lucide
 - **Styling:** CSS
 - **Deployment:** GitHub Pages
 
 ## Live Demo
-[Click here to view the live app](https://ifatima163.github.io/Weather-App-with-OpenWeatherMap-API/)
+[Live Demo will be available here once dashboard is completed](link_here)
 
 ## Development Notes
 - Initialized project with Vite
