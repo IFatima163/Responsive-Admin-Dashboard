@@ -1,4 +1,4 @@
-import { Filter, Menu, Search } from 'lucide-react'
+import { Plus, Sun, Filter, Menu, Search, Bell, Settings, ChevronDown } from 'lucide-react'
 import React from 'react'
 
 function Header() {
@@ -56,6 +56,72 @@ function Header() {
         </div>
 
         {/* Right */}
+        <div className='flex items-center space-x-3'>
+          {/* Quick Action */}
+          <button 
+            className='
+              hidden lg:flex items-center space-x-2 py-2 px-4 bg-gradient-to-r from-blue-500 
+              to-purple-600 text-white rounded-xl hover:shadow transition-all
+            '
+          >
+            <Plus className='w-4 h-4'/>
+            <span className='text-sm font-medium'>New</span>
+          </button>
+          {/* Toggle */}
+          <button 
+            className='
+              p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 
+              dark:hover:bg-slate-800 transition-colors
+            '
+          >
+            <Sun className='w-5 h-5'/>
+          </button>
+          
+          {/* Notification */}
+          <button
+            className='
+              relative p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 
+              dark:hover:bg-slate-800 transition-colors
+            '
+          >
+            <Bell className='w-5 h-5'/>
+            <span 
+              className='
+                absolute -top-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center
+              '
+            >
+              3
+            </span>
+          </button>
+
+          {/* Settings */}
+          <button
+            className='
+              p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 
+              dark:hover:bg-slate-800 transition-colors
+            '
+          >
+            <Settings className='w-5 h-5'/>
+          </button>
+
+          {/* User Profile */}
+          <div className='flex items-center space-x-3 pl-3 border-l border-slate-200 dark:border-slate-700'>
+            <img
+              src='https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=64&dpr=2'
+              alt='User'
+              className='w-8 h-8 rounded-full ring-2 ring-blue-500'
+            />
+            <div className='hidden md:block'>
+              <p className='text-sm font-medium text-slate-500 dark:text-slate-400'>
+                Alex Johnson
+              </p>
+              <p className='text-xs text-slate-500 dark:text-slate-400'>
+                Administrator
+              </p>
+            </div>
+            <ChevronDown className='w-4 h-4 text-slate-400'/>
+          </div>
+        </div>
       </div>
     </div>
   )
