@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from './components/Layout/Sidebar'
 import Header from './components/Layout/Header'
 
 function App() {
+  const [sideBarCollapsed, setSideBarCollapsed] = useState(false)
+  const [currentPage, setCurrentPage] = useState("dashboard")
+
   return (
     <div 
       className='
@@ -11,9 +14,17 @@ function App() {
       '
     >
       <div className='flex h-screen overflow-hidden'>
-        <Sidebar/>
+        <Sidebar 
+          collapsed = {sideBarCollapsed}
+          onToggle = {() => setSideBarCollapsed(!sideBarCollapsed)}
+          currentPage = {currentPage}
+          onPageChange = {setCurrentPage}
+        />
         <div className='flex-1 flex flex-col overflow-hidden'>
-          <Header/>
+          <Header
+            sideBarCollapsed = {sideBarCollapsed}
+            onToggleSidebar = {() => setSideBarCollapsed(!sideBarCollapsed)}
+          />
         </div>
       </div>
     </div>

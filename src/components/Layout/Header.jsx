@@ -1,7 +1,7 @@
 import { Plus, Sun, Filter, Menu, Search, Bell, Settings, ChevronDown } from 'lucide-react'
 import React from 'react'
 
-function Header() {
+function Header({sideBarCollapsed, onToggleSidebar}) {
   return (
     <div 
       className='
@@ -17,6 +17,7 @@ function Header() {
               p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 
               dark:hover:bg-slate-800 transition-colors
             '
+            onClick={onToggleSidebar}
           >
             <Menu className='w-5 h-5'/>
           </button>
