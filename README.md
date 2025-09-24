@@ -15,7 +15,7 @@ A responsive admin dashboard built with Vite + React to view current system stat
 [Live Demo will be available here once dashboard is completed](link_here)
 
 ## Development Notes
-- Initialized project with Vite
+- Initialized project with Vite, installed Tailwind CSS and Rechart
 - Configured Git repository & basic setup
 - Implemented core functionality using useEffect, useState, and useRef
 - Implemented dynamic sidebar, header with user profile, and a stats grid
