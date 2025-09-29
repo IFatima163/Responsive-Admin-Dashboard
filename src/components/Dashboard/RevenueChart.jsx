@@ -13,18 +13,18 @@ import {
 function RevenueChart() {
 
     const data = [
-        {month: "Jan", revenue: 45000, expenses: 32000},
-        {month: "Feb", revenue: 52000, expenses: 38000},
-        {month: "Mar", revenue: 48000, expenses: 35000},
-        {month: "Apr", revenue: 61000, expenses: 42000},
-        {month: "May", revenue: 55000, expenses: 40000},
-        {month: "Jun", revenue: 61000, expenses: 45000},
-        {month: "Jul", revenue: 67000, expenses: 47000},
-        {month: "Aug", revenue: 72000, expenses: 48000},
-        {month: "Sep", revenue: 69000, expenses: 46000},
-        {month: "Oct", revenue: 78000, expenses: 52000},
-        {month: "Nov", revenue: 74000, expenses: 55000},
-        {month: "Dec", revenue: 82000, expenses: 58000},
+        { month: "Jan", revenue: 45000, expenses: 32000},
+        { month: "Feb", revenue: 52000, expenses: 38000},
+        { month: "Mar", revenue: 48000, expenses: 35000},
+        { month: "Apr", revenue: 61000, expenses: 42000},
+        { month: "May", revenue: 55000, expenses: 40000},
+        { month: "Jun", revenue: 61000, expenses: 45000},
+        { month: "Jul", revenue: 67000, expenses: 47000},
+        { month: "Aug", revenue: 72000, expenses: 48000},
+        { month: "Sep", revenue: 69000, expenses: 46000},
+        { month: "Oct", revenue: 78000, expenses: 52000},
+        { month: "Nov", revenue: 74000, expenses: 55000},
+        { month: "Dec", revenue: 82000, expenses: 58000},
     ]
 
     return (
@@ -74,7 +74,6 @@ function RevenueChart() {
                             fontSize={12}
                             tickLine={false}
                             axisLine={false}
-                            tickFormatter={(value) => `$${value / 1000}k`}
                         />
                         <YAxis
                             stroke="#64748b"
