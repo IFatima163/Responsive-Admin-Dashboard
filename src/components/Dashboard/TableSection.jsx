@@ -1,3 +1,4 @@
+import { MoreHorizontal } from 'lucide-react'
 import React from 'react'
 
 function TableSection() {
@@ -26,7 +27,7 @@ function TableSection() {
                 </div>
             </div>
 
-            {/* Table */}
+            {/* Table - error around 1:23:59*/}
             <div className='overflow-x-auto'>
                 <table className='w-full'>
                     <thread>
@@ -47,7 +48,49 @@ function TableSection() {
                                 Date
                             </th>
                         </tr>
-                        <tbody></tbody>
+                        <tbody>
+                            <tr
+                                className='
+                                    border-b border-slate-200/50  dark:border-slate-700/50 hover:bg-slate-50/50 
+                                    dark:hover:bg-slate-800/50 transition-colors
+                                ' 
+                            >
+                                <td className='p-4'>
+                                    <span className='text-sm font-medium text-blue'>
+                                        Order ID
+                                    </span>
+                                </td>
+                                <td className='p-4'>
+                                    <span className='text-sm text-slate-800 dark:text-white'>
+                                        Customer
+                                    </span>
+                                </td>      
+                                <td className='p-4'>
+                                    <span className='text-sm text-slate-800 dark:text-white'>
+                                        Product
+                                    </span>
+                                </td>      
+                                <td className='p-4'>
+                                    <span className='text-sm text-slate-800 dark:text-white'>
+                                        Amount
+                                    </span>
+                                </td>      
+                                <td className='p-4'>
+                                    <span 
+                                        className={`
+                                            text-slate-400 dark:text-white font-medium text-xs px-3 py-1 rounded-full
+                                        `}
+                                    >
+                                        Order Status
+                                    </span>
+                                </td>      
+                                <td className='p-4'>
+                                    <span className='text-sm text-slate-800 dark:text-white'>
+                                        <MoreHorizontal className='w-4 h-4'/>
+                                    </span>
+                                </td>                                
+                            </tr>
+                        </tbody>
                     </thread>
                 </table>
             </div>
