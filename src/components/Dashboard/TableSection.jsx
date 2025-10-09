@@ -95,47 +95,52 @@ function TableSection() {
                                 </th>
                             </tr>
                             <tbody>
-                                <tr
-                                    className='
-                                        border-b border-slate-200/50  dark:border-slate-700/50 hover:bg-slate-50/50 
-                                        dark:hover:bg-slate-800/50 transition-colors
-                                    ' 
-                                >
-                                    <td className='p-4'>
-                                        <span className='text-sm font-medium text-blue'>
-                                            Order ID
-                                        </span>
-                                    </td>
-                                    <td className='p-4'>
-                                        <span className='text-sm text-slate-800 dark:text-white'>
-                                            Customer
-                                        </span>
-                                    </td>      
-                                    <td className='p-4'>
-                                        <span className='text-sm text-slate-800 dark:text-white'>
-                                            Product
-                                        </span>
-                                    </td>      
-                                    <td className='p-4'>
-                                        <span className='text-sm text-slate-800 dark:text-white'>
-                                            Amount
-                                        </span>
-                                    </td>      
-                                    <td className='p-4'>
-                                        <span 
-                                            className={`
-                                                text-slate-400 dark:text-white font-medium text-xs px-3 py-1 rounded-full
-                                            `}
+                                {recentOrders.map((order, index) => {
+                                    return (
+                                        <tr
+                                            className='
+                                                border-b border-slate-200/50  dark:border-slate-700/50 hover:bg-slate-50/50 
+                                                dark:hover:bg-slate-800/50 transition-colors
+                                            ' 
                                         >
-                                            Order Status
-                                        </span>
-                                    </td>      
-                                    <td className='p-4'>
-                                        <span className='text-sm text-slate-800 dark:text-white'>
-                                            <MoreHorizontal className='w-4 h-4'/>
-                                        </span>
-                                    </td>                                
-                                </tr>
+                                            <td className='p-4'>
+                                                <span className='text-sm font-medium text-blue'>
+                                                    {order.id}
+                                                </span>
+                                            </td>
+                                            <td className='p-4'>
+                                                <span className='text-sm text-slate-800 dark:text-white'>
+                                                    {order.cusomer}
+                                                </span>
+                                            </td>      
+                                            <td className='p-4'>
+                                                <span className='text-sm text-slate-800 dark:text-white'>
+                                                    {order.product}
+                                                </span>
+                                            </td>      
+                                            <td className='p-4'>
+                                                <span className='text-sm text-slate-800 dark:text-white'>
+                                                    {order.amount}
+                                                </span>
+                                            </td>      
+                                            <td className='p-4'>
+                                                <span 
+                                                    className={`
+                                                        text-slate-400 dark:text-white font-medium text-xs px-3 py-1 rounded-full 
+                                                        ${getStatusColor(order.status)}    
+                                                    `}
+                                                >
+                                                    {order.status}
+                                                </span>
+                                            </td>      
+                                            <td className='p-4'>
+                                                <span className='text-sm text-slate-800 dark:text-white'>
+                                                    <MoreHorizontal className='w-4 h-4'/>
+                                                </span>
+                                            </td>                                
+                                        </tr>
+                                    )
+                                })}
                             </tbody>
                         </thread>
                     </table>
