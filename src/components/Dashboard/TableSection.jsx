@@ -104,11 +104,12 @@ function TableSection() {
                     </div>
                 </div>
 
-                {/* Table - error around 1:23:59*/}
+                {/* Table */}
                 <div className='overflow-x-auto'>
                     <table className='w-full'>
-                        <thread>
+                        <thead>
                             <tr>
+                                
                                 <th className='text-left p-4 text-sm font-semibold text-slate-600'>
                                     Order ID
                                 </th>
@@ -125,7 +126,7 @@ function TableSection() {
                                     Date
                                 </th>
                             </tr>
-                        </thread>
+                        </thead>
                         <tbody>
                             {recentOrders.map((order, index) => {
                                 return (
@@ -136,7 +137,7 @@ function TableSection() {
                                         ' 
                                     >
                                         <td className='p-4' key={index}>
-                                            <span className='text-sm font-medium text-blue'>
+                                            <span className='text-sm font-medium text-blue-600'>
                                                 {order.id}
                                             </span>
                                         </td>
