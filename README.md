@@ -12,7 +12,7 @@ A responsive admin dashboard built with Vite + React to view current system stat
 - **Deployment:** GitHub Pages
 
 ## Live Demo
-[Live Demo will be available here once dashboard is completed](link_here)
+[Click here to view the live app](https://IFatima163.github.io/Responsive-Admin-Dashboard)
 
 ## Development Notes
 - Initialized project with Vite, installed Tailwind CSS and Rechart
